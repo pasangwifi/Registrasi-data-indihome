@@ -44,25 +44,25 @@
   </div>
 
   <script>
-    function sendToWhatsApp() {
-      var nama = document.getElementById("nama").value;
-      var email = document.getElementById("email").value;
-      var phone = document.getElementById("phone").value;
-      
-      if (nama === ""  email === ""  phone === "") {
-        alert("Harap isi semua data sebelum mengirim.");
-        return;
-      }
+  function sendToWhatsApp() {
+    var nama = document.getElementById("nama").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
 
-      var message = "Halo, saya ingin mendaftar IndiHome.\n\n" +
-                    "Nama: " + nama + "\n" +
-                    "Email: " + email + "\n" +
-                    "No. Handphone: " + phone + "\n\n" +
-                    "Mohon informasi lebih lanjut. Terima kasih!";
-
-      var whatsappUrl = "https://api.whatsapp.com/send?phone=6282281512603&text=" + encodeURIComponent(message);
-      window.open(whatsappUrl, "_blank");
+    if (nama === "" || email === "" || phone === "") {
+      alert("Harap isi semua data sebelum mengirim.");
+      return;
     }
-  </script>
+
+    var message = "Halo, saya ingin mendaftar IndiHome.\n\n" +
+                  "Nama: " + nama + "\n" +
+                  "Email: " + email + "\n" +
+                  "No. Handphone: " + phone + "\n\n" +
+                  "Mohon informasi lebih lanjut. Terima kasih!";
+
+    var whatsappUrl = "https://api.whatsapp.com/send?phone=6282281512603&text=" + encodeURIComponent(message);
+    window.open(whatsappUrl, "_blank");
+  }
+</script>
 </body>
 </html>
